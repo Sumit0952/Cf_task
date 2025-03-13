@@ -31,10 +31,8 @@ const HomeScreen = () => {
 
     const handleSwipe = (_, gestureState) => {
         if (gestureState.dx > 50 && index > 0) {
-            // Swipe right (previous user)
             setIndex(prevIndex => prevIndex - 1);
         } else if (gestureState.dx < -50 && index < users.length - 1) {
-            // Swipe left (next user)
             setIndex(prevIndex => prevIndex + 1);
         }
     };

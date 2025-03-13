@@ -11,7 +11,7 @@ const MainStack = () => {
                 name="Home"
                 component={HomeScreen}
                 options={{
-                    headerShown: false, // Hide the header for this screen
+                    headerShown: false, 
                 }}
             />
         </Stack.Navigator>

@@ -2,8 +2,7 @@ import { StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native';
 import React, { useContext } from 'react';
 import { AuthContext } from '../../../AuthContext';
 import { useNavigation } from '@react-navigation/native';
-import LinearGradient from 'react-native-linear-gradient'; // For gradient background
-
+import LinearGradient from 'react-native-linear-gradient';
 const StartScreen = () => {
     const navigation = useNavigation();
     const { setIsLoggedIn } = useContext(AuthContext);
@@ -15,21 +14,19 @@ const StartScreen = () => {
 
     return (
         <LinearGradient
-            colors={['#1c1c1c', '#4a4a4a']} // Same gradient as HomeScreen
+            colors={['#1c1c1c', '#4a4a4a']} 
             style={styles.container}
         >
             <View style={styles.content}>
                 <Text style={styles.text}>Move on to Profiles</Text>
                 <TouchableOpacity onPress={handleRegister}>
                 <Image
-                    source={require('../../../asset/img/arrow.png')} // Add an arrow image in your assets folder
+                    source={require('../../../asset/img/arrow.png')} 
                     style={styles.arrow}
                     
                 />
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.button} >
-                    <Text style={styles.buttonText}>REGISTER</Text>
-                </TouchableOpacity>
+                
             </View>
         </LinearGradient>
     );
@@ -58,7 +55,7 @@ const styles = StyleSheet.create({
         marginBottom: 30,
     },
     button: {
-        backgroundColor: '#ff4757', // A different color for the button
+        backgroundColor: '#ff4757', 
         paddingVertical: 15,
         paddingHorizontal: 40,
         borderRadius: 10,
